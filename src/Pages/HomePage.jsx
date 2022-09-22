@@ -10,7 +10,7 @@ import Carusel from '../components/Carusel';
 function HomePage() {
   return (
     <div className='text-white' >
-    <Main/>
+    {/* <Main/> */}
    <Thumbnail>discover games</Thumbnail>
    <div className="bg-red- w-full h-full mr-">
      <Carusel/>
