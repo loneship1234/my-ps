@@ -17,7 +17,7 @@ function NavBar() {
           to="/"
           class=" normal-case text-xl cursor-pointer ml-4 lg:ml-16 mr-0"
         >
-          <img src={Logo} alt="" className="w-44 lg:w-48 h-14 mr-auto " />
+          <img src={Logo} alt="" className="w-44 lg:w-48 lg:h-14 h-10 mr-auto " />
         </Link>
       </div>
       <div class="navbar-center pl-[0em]  w-[50em] hidden lg:flex">

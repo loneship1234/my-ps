@@ -16,7 +16,7 @@ export function Card({
   // link,
   imgUrl,
   id,
-  name
+  name,
 }) {
   const clickHandeler = (e) => {
     e.preventDefault();
@@ -28,7 +28,7 @@ export function Card({
     >
       <div
         // to={`/game-catalog/${id}`}
-        className="active:scale-95 transition-all lg:w-[22.5em] w-[25em] lg:h-64 lg:p-0 p-0 h-7 rounded-lg overflow-hidden cursor-pointer bg-gray-800   group "
+        className="active:scale-95 transition-all lg:w-[22.5em] w-[23em] lg:h-64 lg:p-0 p-0 h-7 rounded-lg overflow-hidden cursor-pointer bg-gray-800   group "
       >
         <p
           className={
@@ -80,7 +80,7 @@ export function Cardds({ textSize, img, link, id }) {
         {id}
       </p>
       <img
-      alt=''
+        alt=""
         src={require("../img/" + img + ".jpg")}
         className=" w-full z-0 h-full rounded-lg  bg-gradient-to-t from-black to-transparent lg:group-hover:scale-105 group-active:scale-105 transition-all"
       />
@@ -100,7 +100,7 @@ export function Cardds({ textSize, img, link, id }) {
     // </Link>
   );
 }
-export function CardSecondary({ name, img, IsNew,imgUrl }) {
+export function CardSecondary({ name, img, IsNew, imgUrl }) {
   return (
     <React.Fragment>
       <div className="lg:w-80 w-full h-[22.5em]  lg:h-[22em] rounded-md  overflow-hidden bg-mid-black hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 cursor-pointer active:scale-95">
@@ -169,10 +169,9 @@ export function TrCard() {
     </div>
   );
 }
-export function SearchCard({ imgUrl,name,price,link}){
+export function SearchCard({ imgUrl, name, price, link }) {
   // const { SearchValue, setSearchValue } = useContext(SearchContext);
   return (
-    
     <div
     // onClick={setSearchValue([])}
     >
