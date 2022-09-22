@@ -100,53 +100,76 @@ export function Cardds({ textSize, img, link, id }) {
     // </Link>
   );
 }
-export function CardSecondary({ name, img, IsNew, imgUrl }) {
+export function CardSecondary({ name, IsNew, imgUrl, id }) {
   return (
     <React.Fragment>
-      <div className="lg:w-80 w-full h-[22.5em]  lg:h-[22em] rounded-md  overflow-hidden bg-mid-black hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 cursor-pointer active:scale-95">
-        <img
-          src={imgUrl}
-          className="object-cover w-full h-48"
-          alt=""
-          srcset=""
-        />
-        <div className="  w-full h-60 px-4 py-2 overflow-hidden ">
-          <div className="flex items-center mt-1">
-            <h2 className="font-medium capitalize opacity-90 mb-[3px] text-lg select-none">
-              {name}
-            </h2>
-            {IsNew && <span class="badge ml-2 capitalize">new</span>}
+      <Link to={`/game-catalog/${id}`}>
+        <div className="lg:w-80 w-full h-[22.5em]  lg:h-[22em] rounded-md  overflow-hidden bg-mid-black hover:shadow-xl hover:shadow-zinc-900 transition-all duration-500 cursor-pointer active:scale-95">
+          <img
+            src={imgUrl}
+            className="object-cover w-full h-48"
+            alt=""
+            srcset=""
+          />
+          <div className="  w-full h-60 px-4 py-2 overflow-hidden ">
+            <div className="flex items-center mt-1">
+              <h2 className="font-medium capitalize opacity-90 mb-[3px] text-lg select-none">
+                {name}
+              </h2>
+              {IsNew && <span class="badge ml-2 capitalize">new</span>}
+            </div>
+            <p className="font- text-justify opacity-50 leading-6 text-sm mt-2 select-none line-clamp-4">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Reiciendis nesciunt reprehenderit, voluptate et expedita nisi cum
+              iste illo quas exercitationem. Facere excepturi modi nam officia?
+              Iusto rerum doloremque libero laudantium cupiditate vitae magnam
+              doloribus sunt.
+            </p>
           </div>
-          <p className="font- text-justify opacity-50 leading-6 text-sm mt-2 select-none line-clamp-4">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis
-            nesciunt reprehenderit, voluptate et expedita nisi cum iste illo
-            quas exercitationem. Facere excepturi modi nam officia? Iusto rerum
-            doloremque libero laudantium cupiditate vitae magnam doloribus sunt.
-          </p>
         </div>
-      </div>
+      </Link>
     </React.Fragment>
   );
 }
 //
-export function c({ img }) {
+export function CaruselCard({
+  id,
+  category,
+  imgUrl,
+  name,
+  company,
+  price,
+  rate,
+}) {
   return (
-    <div className=" w-60 h-60 rounded-lg">
-      <img
-        src={require("../img/" + img + ".jpg")}
-        className="h-full w-full rounded-lg"
-        alt=""
-      />
-      <div className="relative mx-auto w-3/4 bottom-10  rounded-md px-3 glass flex items-center h-14">
-        <p className="flex items-center font-semibold  select-none ml-0">
-          59 <p className="text-sm">.99</p>
-          <FaDollarSign />
-        </p>
-        <button className="bg-white text-black px-3  py-2 rounded-md ml-auto capitalize font-semibold flex items-center active:scale-90 transition-all">
-          buy it <BiCart className="ml-1 w-5 h-5" />
-        </button>
+    <Link to={`/game-catalog/${id}`}>
+      <div className="x lg:h-96 h-[21em] lg:w-[250px] w-[210px]  rounded-3xl card-bg cursor-pointer  ">
+        <img
+          src={imgUrl}
+          className="rounded-3xl w-full h-[12em] lg:h-[14em]  transition-all "
+          alt=""
+        />
+        <div className="pl-5 ">
+          <p className="  font-medium lg:text-base text-sm tracking-wider capitalize mt-3 group-hover:absolute">
+            {name}
+          </p>
+          <Rating star={rate} className="lg:scale-110" showNum />
+          <div className="">
+            <p className=" text-[11px] lg:text-[13px] text-gray-400  mt-1">
+              {category}
+            </p>
+          </div>
+          <div className="">
+            <p className="text-[11px] lg:text-[13px] text-gray-400  mt-px">
+              {company}
+            </p>
+          </div>
+          <p className=" font-medium flex  items-center lg:text-base text-sm tracking-wider capitalize mt-4">
+           <FaDollarSign/> {price}  <span className="text-sm">.99</span>
+          </p>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 export function TrCard() {

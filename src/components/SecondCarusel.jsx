@@ -31,7 +31,7 @@ export default function SecondCarusel() {
       disableOnInteraction: false,
     }}
     modules={[Autoplay,EffectFade]}
-    className="mySwiper h-[33.7em]  mt-6  w-[55em] rounded-3xl"
+    className="mySwiper  -mt-3  w-[55em] h-full  rounded-3xl"
   >
     <SwiperSlide className='rounded-3xl mt-5'>
       <img src={img1} alt=""  className="w-full  h-full rounded-3xl"/>

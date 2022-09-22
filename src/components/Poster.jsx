@@ -1,21 +1,19 @@
-import React,{useState} from 'react'
+import React from 'react'
 import {BsCheck2Circle} from 'react-icons/bs'
 // import {ColorExtractor} from 'react-color-extractor';
 import {Link} from 'react-router-dom'
-function Poster({ id,imgUrl,name, textbottom, classname }) {
-  const [firstColor] = useState("");
-  const [secondColor] = useState("");
-  // console.log(firstColor);
+
+function Poster({ id, imgUrl, name, textbottom, classname, colorTheme }) {
 
   return (
-    <Link to={id}>
+    <Link to={`/game-catalog/${id}`}>
       {/* <ColorExtractor
         maxColors={128}
         getColors={(colors) =>
           setFirstColor(colors[1]) || setSecondColor(colors[0])
         }
       > */}
-        <img src={imgUrl} className={" rounded-[30px] " + classname} alt="" />
+      <img src={imgUrl} className={" rounded-[30px] " + classname} alt="" />
       {/* </ColorExtractor> */}
       <p
         style={{ bottom: `${textbottom}em` }}
@@ -27,7 +25,7 @@ function Poster({ id,imgUrl,name, textbottom, classname }) {
       </p>
       <button
         style={{
-          background: `linear-gradient(260deg,${firstColor}, ${secondColor})`,
+          background: `linear-gradient(260deg,${colorTheme[0]}, ${colorTheme[1]})`,
         }}
         className="relative bottom-16 bg-cover overflow-hidden left-[55px] border-2 flex items-center p-2 px-4 rounded-xl border-none  active:scale-95 transition-all"
       >

@@ -53,7 +53,8 @@ function GameCatalog() {
               <CardSecondary
                 key={e.index}
                 IsNew={e.new}
-                name={e.id}
+                name={e.name}
+                id={e.id}
                 img={e.img}
                 imgUrl={e.imgUrl}
               />
