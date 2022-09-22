@@ -1,7 +1,7 @@
 import React from 'react'
 // route
 // 
-import Main from '../components/Main';
+// import Main from '../components/Main';
 import Thumbnail from '../components/Thumbnail';
 import Carusel from '../components/Carusel';
 // import {CardSec} from '../components/Card'
