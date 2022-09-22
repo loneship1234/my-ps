@@ -28,7 +28,7 @@ export function Card({
     >
       <div
         // to={`/game-catalog/${id}`}
-        className="active:scale-95 transition-all lg:w-[22.5em] w-[23em] lg:h-64 lg:p-0 p-0 h-7 rounded-lg overflow-hidden cursor-pointer bg-gray-800   group "
+        className="active:scale-95 transition-all lg:w-[22.5em] w-[23em] h-64 lg:p-0 p-0  rounded-lg overflow-hidden cursor-pointer bg-gray-800   group "
       >
         <p
           className={
