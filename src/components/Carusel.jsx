@@ -14,7 +14,7 @@ function Carusel() {
     // <div className="ml-6">
     <Swiper
       spaceBetween={8}
-      slidesPerView={2}
+      slidesPerView={1}
       breakpoints={{
         640: {
           spaceBetween: 28,
