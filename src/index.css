@@ -31,7 +31,9 @@ body {
 .shadow-custom:hover {
   box-shadow: 0 4px 8px rgb(4, 91, 137);
 }
-
+.swiper-pagination-bullet-active {
+  background-color: #f1f1f1 !important;
+}
 .p {
   grid-area: 1 / 2 / 2 / 3;
 }

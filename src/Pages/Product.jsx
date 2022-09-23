@@ -45,7 +45,7 @@ function Product(props) {
           <div>
             <h1 class="text-2xl font-bold capitalize lg:text-3xl">{name}</h1>
             <p class="mt-1 text-sm text-gray-500">
-              <BreadCrump name={name} link={id} />
+              <BreadCrump name={name} id={id} />
             </p>
           </div>
 

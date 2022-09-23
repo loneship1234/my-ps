@@ -10,7 +10,7 @@ function Thumbnail({ children ,className }) {
       <Flip
         direction="horizontal"
         cascade
-        duration={900}
+        duration={1100}
         className="  font-normal tracking-wide select-none capitalize text-3xl mb-3  text-center"
       >
         <p> {children}</p>

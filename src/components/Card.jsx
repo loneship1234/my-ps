@@ -143,7 +143,7 @@ export function CaruselCard({
 }) {
   return (
     <Link to={`/game-catalog/${id}`}>
-      <div className="x lg:h-96 h-[22.5em] lg:w-[250px] w-11/12  mx-auto rounded-3xl card-bg cursor-pointer  ">
+      <div className="x lg:h-96 h-[22.5em] lg:w-[250px] w-10/12  mx-auto rounded-3xl card-bg cursor-pointer  ">
         <img
           src={imgUrl}
           className="rounded-3xl w-full h-[12em] lg:h-[14em]  transition-all "
