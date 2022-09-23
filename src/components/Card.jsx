@@ -143,29 +143,29 @@ export function CaruselCard({
 }) {
   return (
     <Link to={`/game-catalog/${id}`}>
-      <div className="x lg:h-96 h-[21em] lg:w-[250px] w-[210px]  rounded-3xl card-bg cursor-pointer  ">
+      <div className="x lg:h-96 h-[22.5em] lg:w-[250px] w-11/12  mx-auto rounded-3xl card-bg cursor-pointer  ">
         <img
           src={imgUrl}
           className="rounded-3xl w-full h-[12em] lg:h-[14em]  transition-all "
           alt=""
         />
         <div className="pl-5 ">
-          <p className="  font-medium lg:text-base text-sm tracking-wider capitalize mt-3 group-hover:absolute">
+          <p className="  font-medium lg:text-base text-lg -tracking-wider capitalize mt-3 group-hover:absolute">
             {name}
           </p>
-          <Rating star={rate} className="lg:scale-110" showNum />
+          <Rating star={rate} className="lg:scale-110 scale-110" showNum />
           <div className="">
-            <p className=" text-[11px] lg:text-[13px] text-gray-400  mt-1">
+            <p className=" text-[14px] lg:text-[13px]  text-gray-400  mt-1">
               {category}
             </p>
           </div>
           <div className="">
-            <p className="text-[11px] lg:text-[13px] text-gray-400  mt-px">
+            <p className="text-[14px] lg:text-[13px] text-gray-400  mt-px">
               {company}
             </p>
           </div>
-          <p className=" font-medium flex  items-center lg:text-base text-sm tracking-wider capitalize mt-4">
-           <FaDollarSign/> {price}  <span className="text-sm">.99</span>
+          <p className=" font-medium flex  items-center lg:text-base text-base tracking-wider capitalize mt-4">
+            <FaDollarSign /> {price} <span className="text-sm">.99</span>
           </p>
         </div>
       </div>
