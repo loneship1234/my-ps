@@ -17,9 +17,9 @@ function HomePage() {
   
       <NewestCarusel />
       <Thumbnail className="mt-10">popular games</Thumbnail>
-      <PopularCarusel />
+      {/* <PopularCarusel /> */}
       <Thumbnail className="mt-10">expensive games</Thumbnail>
-      <PriceCarusel />
+      {/* <PriceCarusel /> */}
       
 {/* <FAQ/> */}
     </div>

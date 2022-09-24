@@ -205,7 +205,7 @@ const data = [
   {
     id: "ghost-runner",
     colorTheme: ["#c6b5e6", "#371f35"],
-    category: ["action", "running"],
+    category: ["action", " running"],
     company: "Slipgate Ironworks",
     name: "ghost runner",
     imgList: [
@@ -399,6 +399,7 @@ const data = [
     id: "halo-5",
     name: "halo 5",
     colorTheme: ["#C7D0E1", "#727676"],
+    category: [" shoter", "adventure"],
     company: "343 studio",
     img: "halo 5",
     imgUrl: "https://wallpapercave.com/wp/wp2097567.jpg",
@@ -427,7 +428,7 @@ const data = [
     id: "crysis",
     colorTheme: ["#7E9579", "#656264"],
     company: "crytek",
-
+    category: [" shoter", "open world"],
     name: "crysis",
     imgList: [
       "https://wallpapercave.com/dwp2x/wp7480220.jpg",
@@ -455,6 +456,7 @@ const data = [
   {
     id: "god-of-war-ragnarok",
     colorTheme: ["#B5D2E6", "#446B8F"],
+    category: [" action", "open world"],
     company: "santa monica",
     name: "god of war ragnarok",
     video: "https://www.youtube.com/watch?v=EE-4GvjKcfs&ab_channel=PlayStation",
@@ -481,11 +483,12 @@ const data = [
     textSize: "60",
   },
   {
-    id: "sekiro",
-    name: "sekiro",
+    id: "sekiro-shadows-die-twice",
+    name: "sekiro shadows die twice",
     colorTheme: ["#D8CFCF", "#342F3E"],
+    category: [" action", "open world"],
     company: "from software",
-    img: "crysis",
+    
     imgList: [
       "https://wallpapercave.com/wp/wp5202260.jpg",
       "https://wallpapercave.com/wp/wp5202278.jpg",
@@ -506,7 +509,7 @@ const data = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, rem animi, magni nobis consectetur impedit ea tempora eius doloremque, quae laudantium! Illo doloribus maxime assumenda, exercitationem debitis sapiente. Perspiciatis iusto harum quod vero architecto similique. Officiis cum accusantium a eligendi ullam! Recusandae quasi quidem sequi quae, necessitatibus corporis quaerat pariatur.",
     rate: 5,
-    textSize: "10",
+    textSize: "70",
   },
   {
     id: "cod-modern-warfare-2",
@@ -532,7 +535,7 @@ const data = [
     img: "crysis",
     colorTheme: ["", ""],
     company: "bethesda",
-
+    category: [" shoter", "open world"],
     imgUrl:
       "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.headlinesoftoday.com%2Fwp-content%2Fuploads%2F2020%2F09%2Fstarfield-ps5-exclusive.jpg&f=1&nofb=1",
     new: true,
@@ -547,6 +550,7 @@ const data = [
   },
   {
     id: "halo-infinite",
+    category: [" shoter", "adventure"],
     name: "halo infinite",
     colorTheme: ["#F7FBFD", "#294C2F"],
     company: "343 studio",
@@ -576,6 +580,7 @@ const data = [
     id: "god-falls",
     name: "god falls",
     company: "Gearbox",
+    category: [" action", "adventure"],
     colorTheme: ["#89C2DD", "#8A3B28"],
     img: "crysis",
     imgUrl: "https://wallpapercave.com/wp/wp8167957.jpg",
@@ -602,6 +607,7 @@ const data = [
   {
     id: "ratchet-&-clank-rift-a-part",
     company: "noughty dog",
+    category: [" adventure", "open world"],
     name: "ratchet & clank rift a part",
     colorTheme: ["#143C72", "#8DD6BB"],
     img: "crysis",
@@ -629,6 +635,7 @@ const data = [
   {
     id: "assassin-creed-mirage",
     colorTheme: ["#F8D8AF", "#080A12"],
+    category: [" action", "adventure"],
     company: "ubisoft",
     img: "crysis",
     imgList: [
@@ -657,6 +664,7 @@ const data = [
     id: "demon-souls ",
     colorTheme: ["", ""],
     name: "demon souls",
+    category: [" action", "open world"],
     company: "from software",
     img: "crysis",
     imgUrl: "https://wallpapercave.com/wp/wp7218132.jpg",
@@ -684,7 +692,7 @@ const data = [
     id: "plague-tale-Requiem",
     name: "plague tale Requiem",
     colorTheme: ["#18100A", "#C9B7AA"],
-
+    category: [" adventure", "taletail"],
     img: "crysis",
     imgUrl: "https://wallpapercave.com/dwp2x/wp10511236.jpg",
     imgList: [
@@ -709,6 +717,7 @@ const data = [
   },
   {
     id: "stray",
+    category: [" fantaxy", "open world"],
     name: "stray",
     colorTheme: ["#DB0B07", "#55191D"],
     company: "BlueTwelve studio",
@@ -736,6 +745,7 @@ const data = [
   },
   {
     id: "final-fantasy-XVI",
+    category: [" fantaxy", "open world"],
     name: "final fantasy XVI",
     colorTheme: ["#E2A345", "#0E0E0E"],
     company: "Square Enix",
@@ -764,6 +774,7 @@ const data = [
   },
   {
     id: "suicide-squad",
+    category: [" action", "open world"],
     name: "suicide squad",
     colorTheme: ["#472A4E", "#F5F5F5"],
     company: "rockstady",

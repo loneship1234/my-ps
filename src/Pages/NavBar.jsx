@@ -5,7 +5,7 @@ import { FiLogIn } from "react-icons/fi";
 import { MdOutlinePersonOutline } from "react-icons/md";
 import { TbDeviceGamepad2 } from "react-icons/tb";
 import { RiMenu3Fill } from "react-icons/ri";
-import { AiOutlineTeam } from "react-icons/ai";
+import { AiOutlineTeam, AiOutlineShoppingCart } from "react-icons/ai";
 import { BiHomeAlt } from "react-icons/bi";
 import SearchBar from "../components/SearchBar";
 
@@ -17,7 +17,11 @@ function NavBar() {
           to="/"
           class=" normal-case text-xl cursor-pointer ml-4 lg:ml-16 mr-0"
         >
-          <img src={Logo} alt="" className="w-44 lg:w-48 lg:h-14 h-10 mr-auto " />
+          <img
+            src={Logo}
+            alt=""
+            className="w-44 lg:w-48 lg:h-14 h-10 mr-auto "
+          />
         </Link>
       </div>
       <div class="navbar-center pl-[0em]  w-[50em] hidden lg:flex">
@@ -25,6 +29,7 @@ function NavBar() {
       </div>
       <div class="navbar-end    hidden lg:flex">
         <ul class="menu menu-horizontal p-0">
+          
           <Link
             to="game-catalog"
             className="select-none border-2 border-slate-800 flex items-center p-3  py-2     text-slate-400 rounded-xl text-lg mr-5 capitalize transition-all active:scale-95 hover:text-slate-100 hover:border-slate-400 "
@@ -67,7 +72,6 @@ function NavBar() {
             </p>
           </Link>
           {/*  */}
-
           {/*  */}
           <Link
             to="/game-catalog"
@@ -76,6 +80,15 @@ function NavBar() {
             <TbDeviceGamepad2 className="w-6 h-6" />
             <p className="capitalize text-lg font-medium mr-auto select-none">
               games
+            </p>
+          </Link>
+          <Link
+            to="/add-to-cart"
+            className="h cursor-pointer active:scale-95 bg-child mb-2  text flex items-center px-3 py-[5px] rounded-md transition-all"
+          >
+            <AiOutlineShoppingCart className="w-6 h-6" />
+            <p className="capitalize text-lg font-medium mr-auto select-none">
+            shopping  cart
             </p>
           </Link>
           {/*  */}
@@ -97,7 +110,7 @@ function NavBar() {
             <p className="capitalize text-lg font-medium mr-auto select-none">
               sign up
             </p>
-          </Link>
+          </Link>{" "}
           {/*  */}
           <hr className="bg-gray-500  h-[3px] rounded-md" />
           <Link

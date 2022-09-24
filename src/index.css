@@ -11,6 +11,9 @@ body {
   background-color: #03030c !important;
   color: #f1f1f1;
 }
+/* .odd:nth-child(even){
+  background-color: #ffffff;
+} */
 .bg-mid-black {
   background-color: rgb(20, 20, 20);
 }
@@ -21,6 +24,11 @@ body {
 .tr-card {
   background-color: rgba(255, 255, 255, 0.014);
   border: 0.0001px white solid;
+}
+@layer utilities {
+  .card-bg {
+  background-color: #151d2b !important;
+}
 }
 .card-bg {
   background-color: #0c1017 !important;

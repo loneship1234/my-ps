@@ -82,6 +82,7 @@ function GameCatalog() {
                     img={e.img}
                     textSize={e.textSize}
                     rate={e.rate}
+                    items={e}
                     price={e.price}
                     id={e.id}
                     name={e.name}
@@ -106,6 +107,7 @@ function GameCatalog() {
                     rate={e.rate}
                     price={e.price}
                     id={e.id}
+                    items={e}
                     name={e.name}
                     imgUrl={e.imgUrl}
                   />

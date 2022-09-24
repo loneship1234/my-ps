@@ -2,33 +2,35 @@ import React from "react";
 import { Link } from "react-router-dom";
 import img from "../img/doom eternal.jpg";
 import Rating from "./Rating";
+import { useCart } from "react-use-cart";
 // import { SearchContext } from "../Context/SearchBarContext";
 // Icons
 import { BiCart } from "react-icons/bi";
 import { FaDollarSign } from "react-icons/fa";
+import { AiOutlineClose } from "react-icons/ai";
 //
 export function Card({
   textSize,
   // img,
   price,
-  // rate,
-  // description,
-  // link,
+  rate,
   imgUrl,
   id,
   name,
+  items,
+  // description,
+  // link,
 }) {
-  const clickHandeler = (e) => {
-    e.preventDefault();
-  };
+  // const clickHandeler = (e) => {
+  //   e.preventDefault()
+  //   console.log(price, id, name, imgUrl);
+  // };
+  const { addItem } = useCart();
   return (
-    <Link
-      to={`/game-catalog/${id}`}
-      className="lg:w-full lg:h-60 h-72  w-[80vw]  rounded-lg overflow-hidden cursor-pointer  group  mx-auto"
-    >
+    <div className="lg:w-full lg:h-60 h-72  w-[80vw]  rounded-lg overflow-hidden cursor-pointer  group  mx-auto">
       <div
         // to={`/game-catalog/${id}`}
-        className="active:scale-95 transition-all lg:w-[22.5em] w-[23em] h-64 lg:p-0 p-0  rounded-lg overflow-hidden cursor-pointer bg-gray-800   group "
+        className=" transition-all lg:w-[22.5em] w-[23em] h-64 lg:p-0 p-0  rounded-lg overflow-hidden cursor-pointer bg-gray-800   group "
       >
         <p
           className={
@@ -38,66 +40,48 @@ export function Card({
         >
           {name}
         </p>
-        <img
-          src={imgUrl}
-          alt=""
-          className=" w-full  h-full rounded-lg  bg-gradient-to-t from-black to-transparent   transition-all object-cover group-hover:scale-105"
-        />
-        <div className="bg-gradient-to-t from-black to-transparent z-10  transition-all pr-2 relative bottom-16 h-20 flex items-center overflow-hidden">
+        <Link to={`/game-catalog/${id}`}>
+          {" "}
+          <img
+            src={imgUrl}
+            alt=""
+            className=" w-full  h-full rounded-lg  bg-gradient-to-t from-black to-transparent   transition-all object-cover active:scale-95 group-hover:scale-105"
+          />
+        </Link>
+        <div className="bg-gradient-to-t from-black to-transparent z-10  transition-all lg:pr-2 pr-10 relative bottom-16 lg:h-12 h-20 flex items-center overflow-hidden">
           <p className="flex items-center font-semibold select-none ml-3 mb-1">
             {price} <p className="text-sm">.99</p>
             <FaDollarSign />
           </p>
           <button
-            onClick={clickHandeler}
+            onClick={() => addItem(items)}
             className="bg-white text-black px-5 py-2 mr-1 mb-1 rounded-md ml-auto capitalize font-semibold flex items-center active:scale-95 transition-all"
           >
             buy it <BiCart className="ml-1 w-5 h-5" />
           </button>
         </div>
       </div>
-    </Link>
+    </div>
   );
 }
-export function Cardds({ textSize, img, link, id }) {
-  const clickHandeler = (e) => {
-    e.preventDefault();
-    const Container = e.target.parentElement.parentElement;
-    const image = Container.childNodes[1].src;
-    const name = Container.firstChild.textContent;
-    const price = Container.lastChild.firstChild.textContent;
-    console.log(name, price, image);
-  };
+export function CartCard({ imgUrl, name, rate, price, CloseBtn,index }) {
   return (
-    // <Link to={`/${link}`} className='lg:w-full lg:h-60 h-72  w-[80vw]  rounded-lg overflow-hidden cursor-pointer  group  mx-auto'>
-    <div className="lg:w-full  lg:h-60 h-72  w-[80vw]  rounded-lg overflow-hidden cursor-pointer  group ">
-      <p
-        className={
-          " absolute  rotate-[270deg]  mt-20 select-none  z-10 font-medium text-gray-300 capitalize text-sm  "
-        }
-        style={{ marginLeft: `-${textSize}px` }}
-      >
-        {id}
+    <div
+      key={index}
+      className="even:card-bg flex items-center lg:flex-row flex-col  lg:h-auto h-72  w-full py-5 justify-around"
+    >
+      <img src={imgUrl} className="w-56 rounded-md" alt="" />
+      <p className="capitalize text-lg">{name}</p>
+      <Rating star={rate} className="scale-150" />
+      <p className="flex items-center text-lg">
+        <FaDollarSign /> {price} <span className="text-base">.99</span>
       </p>
-      <img
-        alt=""
-        src={require("../img/" + img + ".jpg")}
-        className=" w-full z-0 h-full rounded-lg  bg-gradient-to-t from-black to-transparent lg:group-hover:scale-105 group-active:scale-105 transition-all"
+      <AiOutlineClose
+        onClick={CloseBtn()}
+        className="cursor-pointer active:scale-95 transition-all"
+        size={25}
       />
-      <div className="bg-gradient-to-t from-black to-transparent z-10 pr-2 relative bottom-16 h-20 flex items-center">
-        <p className="flex items-center font-semibold select-none ml-3 mb-1">
-          59 <p className="text-sm">.99</p>
-          <FaDollarSign />
-        </p>
-        <button
-          onClick={clickHandeler}
-          className="bg-white text-black px-5 py-2 mr-1 mb-1 rounded-md ml-auto capitalize font-semibold flex items-center active:scale-95 transition-all"
-        >
-          buy it <BiCart className="ml-1 w-5 h-5" />
-        </button>
-      </div>
     </div>
-    // </Link>
   );
 }
 export function CardSecondary({ name, IsNew, imgUrl, id }) {
@@ -156,7 +140,7 @@ export function CaruselCard({
           <Rating star={rate} className="lg:scale-110 scale-110" showNum />
           <div className="">
             <p className=" text-[14px] lg:text-[13px]  text-gray-400  mt-1">
-              {category[0]},{category[1]}
+              {category}
             </p>
           </div>
           <div className="">
@@ -172,6 +156,7 @@ export function CaruselCard({
     </Link>
   );
 }
+
 export function TrCard() {
   return (
     <div className="border-[0.0001px] rounded-md h-72 w-full px-6">
