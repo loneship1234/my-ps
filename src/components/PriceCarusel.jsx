@@ -38,8 +38,8 @@ function Carusel() {
                 price={e.price}
                 imgUrl={e.imgUrl}
                 rate={e.rate}
-                category="RPG,action"
-                company="cd project"
+                category={e.category}
+                company={e.company}
               />
             </SwiperSlide>
           );

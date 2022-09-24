@@ -156,7 +156,7 @@ export function CaruselCard({
           <Rating star={rate} className="lg:scale-110 scale-110" showNum />
           <div className="">
             <p className=" text-[14px] lg:text-[13px]  text-gray-400  mt-1">
-              {category}
+              {category[0]},{category[1]}
             </p>
           </div>
           <div className="">

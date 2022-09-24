@@ -2,6 +2,8 @@ const data = [
   {
     id: "horizon-forbiden-west",
     name: "horizon forbiden west",
+    category: ["action", "adventure"],
+    company: "gorilla games",
     img: "horizon forbiden west",
     colorTheme: ["#97e426", "#258edc"],
     ps4Available: false,
@@ -28,6 +30,7 @@ const data = [
   {
     ps4Available: true,
     id: "elden-ring",
+    category: ["soul's like", "open world"],
     name: "elden ring",
     imgList: [
       "https://wallpapercave.com/dwp2x/wp10865198.png",
@@ -44,6 +47,7 @@ const data = [
     imgUrl: "https://wallpapercave.com/dwp2x/wp10865198.png",
     colorTheme: ["##a9833c", "#000000"],
     rate: 2,
+    company: "from software",
     price: 60,
     date: "2021-2-23",
 
@@ -54,6 +58,8 @@ const data = [
   },
   {
     id: "spider-man-miles-morales",
+    category: ["action", "open world"],
+    company: "insomniac games",
     ps4Available: true,
     colorTheme: ["#e91a21", "#141a2a"],
     name: "spider man miles morales",
@@ -82,6 +88,8 @@ const data = [
   },
   {
     id: "anthem",
+    category: ["action", "open world"],
+    company: "ea studio",
     ps4Available: true,
     colorTheme: ["#8fa2cb", "#ada4a5"],
     name: "anthem",
@@ -109,7 +117,9 @@ const data = [
   },
   {
     id: "cyberpunk-2077",
+    category: ["role-play", "action"],
     ps4Available: true,
+    company: "cd project red",
     name: "cyberpunk 2077",
     colorTheme: ["#5e33b9", "#9f253e"],
     price: 50,
@@ -136,6 +146,8 @@ const data = [
   },
   {
     id: "doom-eternal",
+    category: ["shoter", "action"],
+    company: "bethesda games",
     colorTheme: ["#dec43e", "#661206"],
     name: "doom eternal",
     imgList: [
@@ -163,6 +175,8 @@ const data = [
   {
     id: "ghost-of-tsushima",
     colorTheme: ["#f1f1ee", "#212120"],
+    category: ["action", "samurai"],
+    company: "socker punch",
     name: "ghost of tsushima",
     imgList: [
       "https://wallpapercave.com/dwp2x/wp6890841.png",
@@ -191,6 +205,8 @@ const data = [
   {
     id: "ghost-runner",
     colorTheme: ["#c6b5e6", "#371f35"],
+    category: ["action", "running"],
+    company: "Slipgate Ironworks",
     name: "ghost runner",
     imgList: [
       "https://wallpapercave.com/dwp2x/wp7480279.jpg",
@@ -219,6 +235,8 @@ const data = [
   {
     id: "ghostwire-tokyo",
     name: "ghostwire tokyo",
+    category: ["sci-fi", "open world"],
+    company: "bethesda",
     colorTheme: ["#1c0840", "#7fc6d1"],
     img: "ghostwire tokyo",
     imgUrl: "https://wallpapercave.com/dwp2x/wp9844029.png",
@@ -245,8 +263,10 @@ const data = [
   },
   {
     id: "god-of-war",
-    colorTheme: ["#9bc7d3", "##1c272a"],
+    colorTheme: ["#9bc7d3", "#1c272a"],
     name: "god of war",
+    category: ["adventure", "action"],
+    company: "santa monica",
     imgList: [
       "https://wallpapercave.com/dwp2x/wp5204528.jpg",
       "https://wallpapercave.com/dwp2x/wp8151936.jpg",
@@ -274,6 +294,9 @@ const data = [
   },
   {
     id: "star-wars-battlefront-2",
+    category: ["shoter", "action"],
+
+    company: "ea studio",
     colorTheme: ["#050710", "#a0ebfa"],
     imgList: [
       "https://wallpapercave.com/dwp2x/wp2277094.png",
@@ -301,8 +324,9 @@ const data = [
   },
   {
     id: "the-last-of-us-part-2",
+    category: ["adventure", "shoter"],
     colorTheme: ["#567183", "#03040a"],
-
+    company: "noughty dog",
     name: "the last of us part 2",
     imgList: [
       "https://wallpapercave.com/dwp2x/wp5052129.jpg",
@@ -330,6 +354,8 @@ const data = [
   },
   {
     id: "watch-dogs-legion",
+    category: ["role-play", "open world"],
+    company: "ubisoft",
     name: "watch dogs legion",
     colorTheme: ["#174647", "#D35F70"],
 
@@ -373,7 +399,7 @@ const data = [
     id: "halo-5",
     name: "halo 5",
     colorTheme: ["#C7D0E1", "#727676"],
-
+    company: "343 studio",
     img: "halo 5",
     imgUrl: "https://wallpapercave.com/wp/wp2097567.jpg",
     new: true,
@@ -400,6 +426,7 @@ const data = [
   {
     id: "crysis",
     colorTheme: ["#7E9579", "#656264"],
+    company: "crytek",
 
     name: "crysis",
     imgList: [
@@ -428,7 +455,7 @@ const data = [
   {
     id: "god-of-war-ragnarok",
     colorTheme: ["#B5D2E6", "#446B8F"],
-
+    company: "santa monica",
     name: "god of war ragnarok",
     video: "https://www.youtube.com/watch?v=EE-4GvjKcfs&ab_channel=PlayStation",
     img: "crysis",
@@ -457,7 +484,7 @@ const data = [
     id: "sekiro",
     name: "sekiro",
     colorTheme: ["#D8CFCF", "#342F3E"],
-
+    company: "from software",
     img: "crysis",
     imgList: [
       "https://wallpapercave.com/wp/wp5202260.jpg",
@@ -485,7 +512,7 @@ const data = [
     id: "cod-modern-warfare-2",
     name: "cod modern warfare 2",
     colorTheme: ["", ""],
-
+    company: "activision",
     imgList: ["", "", "", "", "", "", "", "", ""],
     img: "crysis",
     imgUrl:
@@ -504,6 +531,7 @@ const data = [
     name: "starfiled",
     img: "crysis",
     colorTheme: ["", ""],
+    company: "bethesda",
 
     imgUrl:
       "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.headlinesoftoday.com%2Fwp-content%2Fuploads%2F2020%2F09%2Fstarfield-ps5-exclusive.jpg&f=1&nofb=1",
@@ -521,7 +549,7 @@ const data = [
     id: "halo-infinite",
     name: "halo infinite",
     colorTheme: ["#F7FBFD", "#294C2F"],
-
+    company: "343 studio",
     img: "crysis",
     imgUrl: "https://wallpapercave.com/dwp2x/wp7017637.jpg",
     imgList: [
@@ -547,6 +575,7 @@ const data = [
   {
     id: "god-falls",
     name: "god falls",
+    company: "Gearbox",
     colorTheme: ["#89C2DD", "#8A3B28"],
     img: "crysis",
     imgUrl: "https://wallpapercave.com/wp/wp8167957.jpg",
@@ -572,6 +601,7 @@ const data = [
   },
   {
     id: "ratchet-&-clank-rift-a-part",
+    company: "noughty dog",
     name: "ratchet & clank rift a part",
     colorTheme: ["#143C72", "#8DD6BB"],
     img: "crysis",
@@ -599,6 +629,7 @@ const data = [
   {
     id: "assassin-creed-mirage",
     colorTheme: ["#F8D8AF", "#080A12"],
+    company: "ubisoft",
     img: "crysis",
     imgList: [
       "https://wallpapercave.com/dwp2x/wp11468134.jpg",
@@ -626,6 +657,7 @@ const data = [
     id: "demon-souls ",
     colorTheme: ["", ""],
     name: "demon souls",
+    company: "from software",
     img: "crysis",
     imgUrl: "https://wallpapercave.com/wp/wp7218132.jpg",
     imgList: [
@@ -679,7 +711,7 @@ const data = [
     id: "stray",
     name: "stray",
     colorTheme: ["#DB0B07", "#55191D"],
-
+    company: "BlueTwelve studio",
     img: "crysis",
     imgUrl: "https://wallpapercave.com/dwp2x/wp11320849.jpg",
     imgList: [
@@ -706,7 +738,7 @@ const data = [
     id: "final-fantasy-XVI",
     name: "final fantasy XVI",
     colorTheme: ["#E2A345", "#0E0E0E"],
-
+    company: "Square Enix",
     img: "crysis",
     imgUrl: "https://wallpapercave.com/dwp2x/wp9431948.png",
     imgList: [
@@ -734,7 +766,7 @@ const data = [
     id: "suicide-squad",
     name: "suicide squad",
     colorTheme: ["#472A4E", "#F5F5F5"],
-
+    company: "rockstady",
     img: "crysis",
     ps4Available: true,
 

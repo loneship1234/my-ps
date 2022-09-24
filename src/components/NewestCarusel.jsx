@@ -9,7 +9,7 @@ import Data from "../data/Data";
 // import img from "../img/ghost runner.jpg";
 import { CaruselCard } from "./Card.jsx";
 
-function Carusel() {
+function NewestCarusel() {
   const [Games] = useState([...Data]);
   return (
     // <div className="ml-6">
@@ -38,8 +38,8 @@ function Carusel() {
                 price={e.price}
                 imgUrl={e.imgUrl}
                 rate={e.rate}
-                category="RPG,action"
-                company="cd project"
+                category={e.category}
+                company={e.company}
               />
             </SwiperSlide>
           );
@@ -49,4 +49,4 @@ function Carusel() {
   );
 }
 
-export default Carusel;
+export default NewestCarusel;
