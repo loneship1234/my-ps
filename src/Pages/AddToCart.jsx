@@ -1,9 +1,9 @@
 import React from "react";
 import { FaDollarSign } from "react-icons/fa";
-import { CartCard } from "../components/Card";
+// import { CartCard } from "../components/Card";
 import Rating from "../components/Rating";
 import { AiOutlineClose } from "react-icons/ai";
-import img from "../img/horizon forbiden west.jpg";
+// import img from "../img/horizon forbiden west.jpg";
 import { useCart } from "react-use-cart";
 import EmptyCart from "../components/EmptyCart";
 
@@ -44,7 +44,7 @@ function AddToCart() {
             })}
           </div>
           <div className="lg:px-28 ">
-            {isEmpty == false && (
+            {isEmpty === false && (
               <button className="w-full h-20 border-white border flex font-semibold items-center text-white capitalize justify-center text-xl hover:bg-white mt-2  hover:text-black transition-all duration-200">
                  buy{" "}
                 {totalUniqueItems <= 1 && <p className="ml-1"> it</p>}{" "}
