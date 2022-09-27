@@ -1,11 +1,11 @@
-import React, { useState, useContext ,useMemo, useEffect } from "react";
+import React, { useState, useContext ,useMemo } from "react";
 // import Data from "../data/Data";
 import { Context } from "../Context/GameCatalogContext";
 import games from "../data/Data";
 
 function SortBy() {
   const [Select, setSelect] = useState("default");
-  const { SortBy, setSortBy } = useContext(Context);
+  const {  setSortBy } = useContext(Context);
   const SelectHandeler = (e) => {
     setSelect(e.target.value);
     localStorage.setItem("sort", e.target.value);
