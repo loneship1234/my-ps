@@ -1,9 +1,12 @@
-import React from "react"
+import React,{useEffect} from "react"
 import Sec from "../components/Sec"
 import Stat from '../components/Stat'
 import TrustReview from "../components/TrustReview"
 import Data from '../data/Data';
 function AboutUs() {
+    useEffect(() => {
+      window.scrollTo({ behavior: "smooth", top: 0 });
+    }, []);
   return (
 <React.Fragment>
   <Stat sales='4.5' users='50' games={Data.length}/>

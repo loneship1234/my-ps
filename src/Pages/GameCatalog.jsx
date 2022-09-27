@@ -1,11 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 // Components
 // import CategoryFilter from '../components/CategoryFilter';
 import TopFilter from "../components/TopFilter";
-import {
-  Fade,
-  Zoom,
-} from "react-awesome-reveal";
+import { Fade, Zoom } from "react-awesome-reveal";
 // import FadeIn from "react-fade-in";
 
 // import Rating from '../components/Rating';
@@ -32,6 +29,9 @@ function GameCatalog() {
   // const Games = [...games].sort((a, b) => b.rate - a.rate);
   // const Games = [...games].sort((a, b) => (a.date > b.date ? -1 : 1)); sort by newest
   // const Games = [...games].sort((a, b) => (a.date > b.date ? 1 : -1)); sort by oldest
+  useEffect(() => {
+    window.scrollTo({ behavior: "smooth", top: 0 });
+  }, []);
   return (
     <React.Fragment>
       <Context.Provider

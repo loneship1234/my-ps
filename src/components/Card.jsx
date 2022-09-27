@@ -1,9 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import img from "../img/doom eternal.jpg";
 import Rating from "./Rating";
 import { useCart } from "react-use-cart";
 // import { SearchContext } from "../Context/SearchBarContext";
+import { ToastContainer, toast } from "react-toastify";
 // Icons
 import { BiCart } from "react-icons/bi";
 import { FaDollarSign } from "react-icons/fa";
@@ -13,7 +14,7 @@ export function Card({
   textSize,
   // img,
   price,
-  rate,
+  // rate,
   imgUrl,
   id,
   name,
@@ -21,10 +22,22 @@ export function Card({
   // description,
   // link,
 }) {
-  // const clickHandeler = (e) => {
-  //   e.preventDefault()
-  //   console.log(price, id, name, imgUrl);
-  // };
+  const navigate = useNavigate();
+  const clickHandeler = () => {
+    addItem(items);
+    toast(`item added,click to see you're cart 😎 `, {
+      position: "top-right",
+      progressStyle: { backgroundColor: "#ffff" },
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      theme: "dark",
+      pauseOnHover: false,
+      onClick: () => navigate("/add-to-cart"),
+      draggable: true,
+      progress: undefined,
+    });
+  };
   const { addItem } = useCart();
   return (
     <div className="lg:w-full lg:h-60 h-72  w-[80vw]  rounded-lg overflow-hidden cursor-pointer  group  mx-auto">
@@ -54,17 +67,30 @@ export function Card({
             <FaDollarSign />
           </p>
           <button
-            onClick={() => addItem(items)}
+            onClick={clickHandeler}
             className="bg-white text-black px-5 py-2 mr-1 mb-1 rounded-md ml-auto capitalize font-semibold flex items-center active:scale-95 transition-all"
           >
             buy it <BiCart className="ml-1 w-5 h-5" />
           </button>
         </div>
-      </div>
+      </div>{" "}
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+      {/* Same as */}
+      <ToastContainer />
     </div>
   );
 }
-export function CartCard({ imgUrl, name, rate, price, CloseBtn,index }) {
+export function CartCard({ imgUrl, name, rate, price, CloseBtn, index }) {
   return (
     <div
       key={index}

@@ -10,7 +10,7 @@ import SignUp from './Pages/SignUp';
 import Page404 from './Pages/Page404';
 import GameCatalog from './Pages/GameCatalog'
 import AddToCart from "./Pages/AddToCart";
-// import Footer from './Pages/Footer';
+import Footer from './Pages/Footer';
 import Product from './Pages/Product';
 import {CartProvider} from 'react-use-cart'
 
@@ -30,7 +30,7 @@ function App() {
           <Route path="*" element={<Page404 />} />
           <Route path="/game-catalog/:id" element={<Product />} />
         </Routes>
-        {/* <Footer/> */}
+        <Footer/>
       </Router>
     </CartProvider>
   );

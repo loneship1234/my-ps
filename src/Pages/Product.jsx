@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import BreadCrump from "../components/BreadCrump";
 import { FaDollarSign } from "react-icons/fa";
@@ -11,7 +11,7 @@ function Product(props) {
   const { id } = useParams();
   const product = Data.find((product) => product.id === id);
   const {
-    ps4Available,
+    // ps4Available,
     // Id,
     price,
     rate,
@@ -38,6 +38,9 @@ function Product(props) {
       refs.current.push(el);
     }
   };
+    useEffect(() => {
+      window.scrollTo({ behavior: "smooth", top: 0 });
+    }, []);
   return (
     <React.Fragment>
       <section>
@@ -148,7 +151,7 @@ function Product(props) {
                   <legend class="text-lg font-bold capitalize">type</legend>
 
                   <div class="flex mt-2 space-x-1">
-                    {ps4Available && (
+                    {/* {ps4Available && ( */}
                       <label for="material_cotton" class="cursor-pointer">
                         <input
                           type="radio"
@@ -162,7 +165,7 @@ function Product(props) {
                           ps4
                         </span>
                       </label>
-                    )}
+                    {/* )} */}
 
                     <label for="material_wool" class="cursor-pointer">
                       <input

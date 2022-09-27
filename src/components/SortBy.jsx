@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext ,useMemo, useEffect } from "react";
 // import Data from "../data/Data";
 import { Context } from "../Context/GameCatalogContext";
 import games from "../data/Data";
@@ -10,7 +10,7 @@ function SortBy() {
     setSelect(e.target.value);
     localStorage.setItem("sort", e.target.value);
   };
-  useEffect(() => {
+  useMemo(() => {
     if (Select === "default") {
       setSortBy([...games]);
       // localStorage.setItem("Sort", Select);
@@ -32,7 +32,7 @@ function SortBy() {
     }
     const lastSelected = localStorage.getItem("sort");
     setSelect(lastSelected);
-  }, [SortBy, Select, setSortBy]);
+  }, [ Select, setSortBy]);
   return (
     <div className="text-white flex items-center">
       {/* <p>{Select}</p> */}

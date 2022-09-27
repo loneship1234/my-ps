@@ -2,9 +2,9 @@ import React from 'react'
 
 function FAQ({topic,describtion,className}) {
   return (
-    <div class={`space-y-4 mx-6 ${className}`}>
+    <div class={`space-y-4  card-b pb-4 mx-6 ${className}`}>
       <details class="group" open>
-        <summary class="flex items-center justify-between p-4 rounded-lg cursor-pointer text-white">
+        <summary defaultChecked={false} class="flex items-center justify-between p-4 rounded-lg cursor-pointer text-white">
           <h5 class="font-medium ">{topic}</h5>
 
           <svg

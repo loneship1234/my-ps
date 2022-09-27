@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import img from '../img/batman arkham knight.jpg';
 import {Link} from 'react-router-dom';
 import Input from '../components/Input';
@@ -18,6 +18,9 @@ const [PassValid, setPassValid] = useState(false);
 //   setBtnAvailable(true)
 //   // console.log('is not valid');
 // }
+  useEffect(() => {
+    window.scrollTo({ behavior: "smooth", top: 0 });
+  }, []);
 const submitHandeler=(e)=>{
 e.preventDefault()
 }
