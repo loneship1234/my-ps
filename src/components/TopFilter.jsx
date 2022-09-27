@@ -17,10 +17,10 @@ function TopFilter({ setSortBy }) {
   };
   const EffectHandeler = () => {
     Effect ? setEffect(false) : setEffect(true);
-    toast(`Effect Has Been Changed  😎 `, {
+    toast(`Effect Has Been Changed 🤩`, {
       position: "top-right",
       progressStyle: { backgroundColor: "#ffff" },
-      autoClose: 5000,
+      autoClose: 1000,
       hideProgressBar: false,
       closeOnClick: true,
       theme: "dark",

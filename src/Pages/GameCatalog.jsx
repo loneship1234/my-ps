@@ -9,6 +9,7 @@ import { Fade, Zoom } from "react-awesome-reveal";
 import { CardSecondary, Card } from "../components/Card";
 import games from "../data/Data";
 
+
 import { Context } from "../Context/GameCatalogContext";
 // {/* <Card img='horizon forbiden west' textSize='-ml-14'/> */}
 // {/* <CardThirdly img='spider man miles morales'/> */}
@@ -63,57 +64,63 @@ function GameCatalog() {
         )}
         {Big && (
           <div
+         
             id="container"
             className={
               " flex lg:flex-row flex-col flex-wrap lg:px-12 px-1 lg:gap-5 gap-y-6 items-center  py-3 w-full h-full "
             }
           >
-            {Effect && (
-              <Fade
-                fraction={1}
-                cascade
-                triggerOnce
-                damping={0.05}
-                duration={900}
-              >
-                {SortBy.map((e) => (
-                  <Card
-                    key={e.index}
-                    img={e.img}
-                    textSize={e.textSize}
-                    rate={e.rate}
-                    items={e}
-                    price={e.price}
-                    id={e.id}
-                    name={e.name}
-                    imgUrl={e.imgUrl}
-                  />
-                ))}
-              </Fade>
-            )}
-            {Effect === false && (
-              <Zoom
-                fraction={1}
-                cascade
-                triggerOnce
-                ZoomDirection="up"
-                duration={500}
-              >
-                {SortBy.map((e) => (
-                  <Card
-                    key={e.index}
-                    img={e.img}
-                    textSize={e.textSize}
-                    rate={e.rate}
-                    price={e.price}
-                    id={e.id}
-                    items={e}
-                    name={e.name}
-                    imgUrl={e.imgUrl}
-                  />
-                ))}
-              </Zoom>
-            )}
+            
+              {Effect && (
+                <Fade
+                  fraction={1}
+                  cascade
+                  triggerOnce
+                  damping={0.05}
+                  duration={900}
+                >
+           
+                  {SortBy.map((e) => (
+                    <Card
+                      key={e.index}
+                      img={e.img}
+                      textSize={e.textSize}
+                      rate={e.rate}
+                      items={e}
+                      price={e.price}
+                      id={e.id}
+                      name={e.name}
+                      imgUrl={e.imgUrl}
+                    />
+                  ))}
+                 </Fade>
+              )}
+              {Effect === false && (
+                <Zoom
+                  fraction={1}
+                  cascade
+                  triggerOnce
+                  ZoomDirection="up"
+                  duration={500}
+                >
+                  {/* <AnimatePresence> */}
+                  {SortBy.map((e) => (
+                    <Card
+                      key={e.index}
+                      img={e.img}
+                      textSize={e.textSize}
+                      rate={e.rate}
+                      price={e.price}
+                      id={e.id}
+                      items={e}
+                      name={e.name}
+                      imgUrl={e.imgUrl}
+                    />
+                  ))}
+                  {/* </AnimatePresence> */}
+                </Zoom>
+              )}
+           
           </div>
         )}
       </Context.Provider>

@@ -2,13 +2,22 @@ import React, { useRef, useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import BreadCrump from "../components/BreadCrump";
 import { FaDollarSign } from "react-icons/fa";
+import { TbShoppingCartPlus } from "react-icons/tb";
+import {  useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import { useCart } from "react-use-cart";
 import Rating from "../components/Rating";
+import notife from '../audio/notife.wav';
 // import { Player, BigPlayButton } from "video-react";
 import Data from "../data/Data";
 // import ReactImageMagnify from "react-image-magnify";
 // import ReactImageZoom from "react-image-zoom";
-function Product(props) {
+function Product() {
+  const notifeBtn = new Audio(notife);
+  const navigate = useNavigate();
+
   const { id } = useParams();
+  const { addItem } = useCart();
   const product = Data.find((product) => product.id === id);
   const {
     // ps4Available,
@@ -152,19 +161,19 @@ function Product(props) {
 
                   <div class="flex mt-2 space-x-1">
                     {/* {ps4Available && ( */}
-                      <label for="material_cotton" class="cursor-pointer">
-                        <input
-                          type="radio"
-                          id="material_cotton"
-                          name="material"
-                          class="sr-only peer"
-                          checked
-                        />
+                    <label for="material_cotton" class="cursor-pointer">
+                      <input
+                        type="radio"
+                        id="material_cotton"
+                        name="material"
+                        class="sr-only peer"
+                        checked
+                      />
 
-                        <span class="block px-3 py-1  border border-gray-200 rounded-lg peer-checked:ring-2 ring-blue-600 ring-opacity-70 font-semibold tracking-wider text-md capitalize ">
-                          ps4
-                        </span>
-                      </label>
+                      <span class="block px-3 py-1  border border-gray-200 rounded-lg peer-checked:ring-2 ring-blue-600 ring-opacity-70 font-semibold tracking-wider text-md capitalize ">
+                        ps4
+                      </span>
+                    </label>
                     {/* )} */}
 
                     <label for="material_wool" class="cursor-pointer">
@@ -190,10 +199,7 @@ function Product(props) {
                   <p class="text-sm">
                     <span class="block">Pay as low as $3/mo with 0% APR.</span>
 
-                    <p
-                      
-                      class="inline-block mt-1 hover:underline underline-offset-2 font-bold transition-all"
-                    >
+                    <p class="inline-block mt-1 hover:underline underline-offset-2 font-bold transition-all">
                       Find out more
                     </p>
                   </p>
@@ -208,9 +214,25 @@ function Product(props) {
 
                 <button
                   type="button"
-                  class="w-full px-6 py-3 text-sm font-bold tracking-wide active:scale-95 text-white transition-all select-none bg-gradient-to-tl uppercase to-violet-700 from-blue-600 rounded"
+                  onClick={() => {
+                    notifeBtn.play()
+                    addItem(product);
+                    toast(`item added,click to see you're cart 😎 `, {
+                      position: "top-right",
+                      progressStyle: { backgroundColor: "#ffff" },
+                      autoClose: 3000,
+                      hideProgressBar: false,
+                      closeOnClick: true,
+                      theme: "dark",
+                      pauseOnHover: false,
+                      onClick: () => navigate("/add-to-cart"),
+                      draggable: true,
+                      progress: undefined,
+                    });
+                  }}
+                  class="w-full px-6 py-3 text-sm font-bold tracking-wide active:scale-95 flex items-center justify-center text-black transition-all select-none bg-gradient-to-tl uppercase bg-white rounded"
                 >
-                  add to cart
+                  add to cart <TbShoppingCartPlus className="w-5 h-5 ml-2" />
                 </button>
 
                 <button
@@ -229,6 +251,19 @@ function Product(props) {
             </div>
           </div>
         </div>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+        {/* Same as */}
+        <ToastContainer />
       </section>
     </React.Fragment>
   );

@@ -5,19 +5,19 @@ import { BsCartX, BsEmojiSmileUpsideDown } from "react-icons/bs";
 //
 function Page404() {
   return (
-    <div className="flex items-center bg--500   flex-col lg:flex-row  w-screen h-[90vh] select-none">
+    <div className="flex items-center bg--500   flex-col lg:flex-row  w-full h-[90vh] select-none">
       <div className="bg--500">
         {/* <BiGhost className='w-80 h-80 '/> */}
         <div className="lg:ml-32 ml-2">
           <p className="capitalize font-bold text-center lg:text-left text-7xl lg:text-8xl mt-10 lg:mt-0 mb-10 lg:mb-14 ">
             empty cart
           </p>
-          <div className="flex bg--500 items-center">
+          <div className="flex bg--500 items-center text-md lg:text-2xl">
             {" "}
-            <p className="capitalize text-2xl lg:text-2xl font-semibold  tracking-wide mb-14 my-3">
-              sorry you're cart is empty why woudn't you add some games
+            <p className="capitalize  font-semibold  tracking-wide mb-14 my-3">
+              you're cart is empty why woudn't you add some games
             </p>{" "}
-            <BsEmojiSmileUpsideDown className="w-10 h-10 mt-2 mb-11 ml-2" />
+            <BsEmojiSmileUpsideDown className="lg:w-10 lg:h-10 w-5 h-5 mt-2 mb-11 ml-2" />
           </div>
         </div>
       </div>

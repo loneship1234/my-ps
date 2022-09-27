@@ -1,10 +1,12 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import img from "../img/doom eternal.jpg";
+import img from "../img/anthem.jpg";
 import Rating from "./Rating";
 import { useCart } from "react-use-cart";
 // import { SearchContext } from "../Context/SearchBarContext";
 import { ToastContainer, toast } from "react-toastify";
+import notife from "../audio/notife.wav";
+
 // Icons
 import { BiCart } from "react-icons/bi";
 import { FaDollarSign } from "react-icons/fa";
@@ -23,7 +25,9 @@ export function Card({
   // link,
 }) {
   const navigate = useNavigate();
+  const notifeBtn = new Audio(notife);
   const clickHandeler = () => {
+    notifeBtn.play();
     addItem(items);
     toast(`item added,click to see you're cart 😎 `, {
       position: "top-right",
@@ -40,54 +44,56 @@ export function Card({
   };
   const { addItem } = useCart();
   return (
-    <div className="lg:w-full lg:h-60 h-72  w-[80vw]  rounded-lg overflow-hidden cursor-pointer  group  mx-auto">
-      <div
-        // to={`/game-catalog/${id}`}
-        className=" transition-all lg:w-[22.5em] w-[23em] h-64 lg:p-0 p-0  rounded-lg overflow-hidden cursor-pointer bg-gray-800   group "
-      >
-        <p
-          className={
-            " absolute  rotate-[270deg]  mt-20 select-none  z-10 font-medium text-gray-300 capitalize text-sm  "
-          }
-          style={{ marginLeft: `-${textSize}px` }}
+    <React.Fragment>
+      <div className="lg:w-full lg:h-60 h-72  w-[90vw]  rounded-lg overflow-hidden cursor-pointer  group  mx-auto">
+        <div
+          // to={`/game-catalog/${id}`}
+          className=" transition-all lg:w-[22.5em] w-[23em] h-64 lg:p-0 p-0  rounded-lg overflow-hidden cursor-pointer bg-gray-800   group "
         >
-          {name}
-        </p>
-        <Link to={`/game-catalog/${id}`}>
-          {" "}
-          <img
-            src={imgUrl}
-            alt=""
-            className=" w-full  h-full rounded-lg  bg-gradient-to-t from-black to-transparent   transition-all object-cover active:scale-95 group-hover:scale-105"
-          />
-        </Link>
-        <div className="bg-gradient-to-t from-black to-transparent z-10  transition-all lg:pr-2 pr-10 relative bottom-16 lg:h-12 h-20 flex items-center overflow-hidden">
-          <p className="flex items-center font-semibold select-none ml-3 mb-1">
-            {price} <p className="text-sm">.99</p>
-            <FaDollarSign />
-          </p>
-          <button
-            onClick={clickHandeler}
-            className="bg-white text-black px-5 py-2 mr-1 mb-1 rounded-md ml-auto capitalize font-semibold flex items-center active:scale-95 transition-all"
+          <p
+            className={
+              " absolute  rotate-[270deg]  mt-20 select-none  z-10 font-medium text-gray-300 capitalize text-sm  "
+            }
+            style={{ marginLeft: `-${textSize}px` }}
           >
-            buy it <BiCart className="ml-1 w-5 h-5" />
-          </button>
-        </div>
-      </div>{" "}
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-      {/* Same as */}
-      <ToastContainer />
-    </div>
+            {name}
+          </p>
+          <Link to={`/game-catalog/${id}`}>
+            {" "}
+            <img
+              src={imgUrl}
+              alt=""
+              className=" w-full  h-full rounded-lg  bg-gradient-to-t from-black to-transparent   transition-all object-cover active:scale-95 group-hover:scale-105"
+            />
+          </Link>
+          <div className="bg-gradient-to-t from-black to-transparent z-10  transition-all lg:pr-2 pr-10 relative bottom-16 lg:h-12 h-20 flex items-center overflow-hidden">
+            <p className="flex items-center font-semibold select-none ml-3 mb-1">
+              {price} <p className="text-sm">.99</p>
+              <FaDollarSign />
+            </p>
+            <button
+              onClick={clickHandeler}
+              className="bg-white text-black px-3 py-2 lg:mr-1 -mr-5 mb-1 rounded-md ml-auto capitalize font-semibold flex items-center active:scale-95 transition-all"
+            >
+              buy it <BiCart className="ml-1 w-5 h-5" />
+            </button>
+          </div>
+        </div>{" "}
+        {/* Same as */}
+
+      </div>
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+    </React.Fragment>
   );
 }
 export function CartCard({ imgUrl, name, rate, price, CloseBtn, index }) {
@@ -96,6 +102,29 @@ export function CartCard({ imgUrl, name, rate, price, CloseBtn, index }) {
       key={index}
       className="even:card-bg flex items-center lg:flex-row flex-col  lg:h-auto h-72  w-full py-5 justify-around"
     >
+      <div className="flex w-full items-center justify-center bg-red-400">
+        <img src={imgUrl} className="w-56 rounded-md" alt="" />
+      </div>
+      <div className="flex w-full items-center justify-center bg-red-100">
+        <p className="capitalize text-lg">{name}</p>
+      </div>
+      <div className="flex w-full items-center justify-center bg-red-800">
+        <Rating star={rate} className="scale-150" />
+      </div>
+      <div className="flex w-full items-center justify-center bg-red-500">
+        <p className="flex items-center text-lg">
+          <FaDollarSign /> {price} <span className="text-base">.99</span>
+        </p>
+      </div>
+      <div className="flex w-full items-center justify-center bg-red-700">
+        {" "}
+        <AiOutlineClose
+          onClick={CloseBtn()}
+          className="cursor-pointer active:scale-95 transition-all"
+          size={25}
+        />
+      </div>
+      {/* 
       <img src={imgUrl} className="w-56 rounded-md" alt="" />
       <p className="capitalize text-lg">{name}</p>
       <Rating star={rate} className="scale-150" />
@@ -106,7 +135,7 @@ export function CartCard({ imgUrl, name, rate, price, CloseBtn, index }) {
         onClick={CloseBtn()}
         className="cursor-pointer active:scale-95 transition-all"
         size={25}
-      />
+      /> */}
     </div>
   );
 }
