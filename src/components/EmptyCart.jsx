@@ -18,6 +18,7 @@ function Page404() {
             <BsEmojiSmileUpsideDown className="lg:w-10 lg:h-10 w-5 h-5   ml-2" />
           </div>
         </div>
+        {/*  */}
       </div>
       <div className="flex items-center mx-auto lg:ml-auto lg:mr-20 anime lg:mt-0 mt-16">
         <BsCartX className="w-80 h-80" />
