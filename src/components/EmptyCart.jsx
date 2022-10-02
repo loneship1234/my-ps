@@ -1,5 +1,3 @@
-import React from "react";
-
 import { BsCartX, BsEmojiSmileUpsideDown } from "react-icons/bs";
 // import { RiEmotionSadLine } from "react-icons/ri";
 //
