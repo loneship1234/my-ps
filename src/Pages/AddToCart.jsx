@@ -20,25 +20,25 @@ function AddToCart() {
               return (
                 <div
                   key={index}
-                  className="even:card-bg flex items-center lg:flex-row flex-col  lg:h-auto h-72  w-full py-5 justify-around"
+                  className="even:bg-slate-900 flex items-center lg:flex-row flex-col  lg:h-auto h-72  w-full py-5 justify-around"
                 >
-                  <div className="w-full flex items-center justify-center pl-20">
+                  <div className="w-full lg:flex-row flex-col flex items-center justify-center  mb-2">
                     <img src={item.imgUrl} className="w-56 rounded-md" alt="" />
                   </div>
-                  <div className="w-full flex items-center justify-center">
+                  <div className="w-full lg:flex-row flex-col flex items-center justify-center mb-2">
                     <p className="capitalize text-lg">{item.name}</p>
                   </div>
 
-                  <div className="w-full flex items-center justify-center">
+                  <div className="w-full lg:flex-row flex-col flex items-center justify-center mb-2">
                     <Rating star={item.rate} className="scale-150" />
                   </div>
-                  <div className="w-full flex items-center justify-center">
+                  <div className="w-full lg:flex-row flex-col flex items-center justify-center mb-2">
                     <p className="flex items-center text-lg">
                       <FaDollarSign /> {item.price}{" "}
                       <span className="text-base">.99</span>
                     </p>
                   </div>
-                  <div className="w-full flex items-center justify-center">
+                  <div className="w-full lg:flex-row flex-col flex items-center justify-center mb-2">
                     <AiOutlineClose
                       onClick={() => removeItem(item.id)}
                       className="cursor-pointer active:scale-95 transition-all"

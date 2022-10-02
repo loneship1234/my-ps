@@ -47,7 +47,7 @@ function GameCatalog() {
         {Small && (
           <div
             className={
-              " flex lg:flex-row flex-col pb-5  w-full lg:px-20 px-[4em] gap-7 py-4 justify-between flex-wrap h-full "
+              " flex lg:flex-row flex-col pb-5  w-full lg:px-20 px-[2em] gap-7 py-4 justify-between flex-wrap h-full "
             }
           >
             {SortBy.map((e) => (

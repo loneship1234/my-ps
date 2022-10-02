@@ -88,7 +88,7 @@ function NavBar() {
           >
             <AiOutlineShoppingCart className="w-6 h-6" />
             <p className="capitalize text-lg font-medium mr-auto select-none">
-            shopping  cart
+            cart
             </p>
           </Link>
           {/*  */}

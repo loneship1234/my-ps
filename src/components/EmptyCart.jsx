@@ -9,15 +9,15 @@ function Page404() {
       <div className="bg--500">
         {/* <BiGhost className='w-80 h-80 '/> */}
         <div className="lg:ml-32 ml-2">
-          <p className="capitalize font-bold text-center lg:text-left text-7xl lg:text-8xl mt-10 lg:mt-0 mb-10 lg:mb-14 ">
+          <p className="capitalize font-bold text-center lg:text-left text-6xl lg:text-8xl mt-10 lg:mt-0 mb-10 lg:mb-14 ">
             empty cart
           </p>
-          <div className="flex bg--500 items-center text-md lg:text-2xl">
+          <div className="flex  items-center text-xs text-center lg:text-2xl">
             {" "}
-            <p className="capitalize  font-semibold  tracking-wide mb-14 my-3">
+            <p className="capitalize  font-semibold  tracking-wide ">
               you're cart is empty why woudn't you add some games
             </p>{" "}
-            <BsEmojiSmileUpsideDown className="lg:w-10 lg:h-10 w-5 h-5 mt-2 mb-11 ml-2" />
+            <BsEmojiSmileUpsideDown className="lg:w-10 lg:h-10 w-5 h-5   ml-2" />
           </div>
         </div>
       </div>
