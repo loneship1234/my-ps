@@ -16,8 +16,8 @@ function Product() {
   const notifeBtn = new Audio(notife);
   const navigate = useNavigate();
 
-  const { id } = useParams();
   const { addItem } = useCart();
+  const { id } = useParams();
   const product = Data.find((product) => product.id === id);
   const {
     // ps4Available,

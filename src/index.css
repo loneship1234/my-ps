@@ -169,3 +169,10 @@ select option:hover {
 
   /* @apply w-full aspect-video mt-6 rounded-xl; */
 }
+@font-face {
+  font-family: nebula;
+  src: url('font/Nebula/Nebula.ttf');
+}
+.font{
+  font-family: nebula;
+}

@@ -1,7 +1,7 @@
 import { BsCartX, BsEmojiSmileUpsideDown } from "react-icons/bs";
 // import { RiEmotionSadLine } from "react-icons/ri";
 //
-function Page404() {
+function EmptyCart() {
   return (
     <div className="flex items-center bg--500   flex-col lg:flex-row  w-full h-[90vh] select-none">
       <div className="bg--500">
@@ -35,4 +35,4 @@ function Page404() {
   );
 }
 
-export default Page404;
+export default EmptyCart;

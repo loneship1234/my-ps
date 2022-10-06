@@ -6,7 +6,7 @@ import {Flip} from 'react-awesome-reveal'
 function Thumbnail({ children ,className }) {
   // const [State, setState] = useState(false);
   return (
-    <div className={`flex items-center  my-3 lg:ml-[75px] ml-7  ${className}`}>
+    <div className={`flex items-center  my-3 lg:ml-[75px] ml-7 font ${className}`}>
       <Flip
         direction="horizontal"
         cascade
