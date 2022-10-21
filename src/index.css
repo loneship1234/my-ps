@@ -174,5 +174,5 @@ select option:hover {
   src: url('font/Nebula/Nebula.ttf');
 }
 .font{
-  font-family: nebula;
+  /* font-family: nebula; */
 }
